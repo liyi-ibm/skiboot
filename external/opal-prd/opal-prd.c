@@ -2196,9 +2196,6 @@ static int run_prd_daemon(struct opal_prd_ctx *ctx)
 		hinterface.pnor_write = NULL;
 	}
 
-	if (!is_fsp_system())
-		hinterface.wakeup = NULL;
-
 	ipmi_init(ctx);
 
 	pr_debug("HBRT: calling hservices_init");
